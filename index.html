@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>JAVA - Botões</title>
+        
+        <style>
+            h1 {font-family: cursive;}
+        </style>
+        
+        <script>
+            
+    document.addEventListener("DOMContentLoaded", function () {
+    inserir_html_inner();
+    inserir_botao();});
+
+    function maior(fontSize) 
+    {h1 = document.querySelector("h1")
+            h1.style.fontSize = "80px";}
+
+    function menor(fontSize) 
+    {h1 = document.querySelector("h1")
+    h1.style.fontSize = "60px";}
+
+    function inserir_botao() 
+    {div = document.createElement("div");
+    div.appendChild(botao);
+    document.body.prepend(div);}
+
+    function inserir_html_inner() 
+    {div = document.createElement("div");
+    div.innerHTML = `
+    <button onclick="maior('fontSize')">+</button>
+    <button onclick="menor('fontSize')">-</button>`;
+    document.body.prepend(div);}
+
+        </script>
+    </head>
+    <body>
+        <h1> Botões - JAVA </h1>
+    </body>
+
+</html>
